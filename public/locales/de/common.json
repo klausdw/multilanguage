@@ -1,0 +1,11 @@
+{
+	"title": "Hauptseite | next-i18next",
+	"keywords": "test DE",
+	"description": "beschreibung DE",
+	"path": "/de",
+	"h1": "Beispiel",
+	"change-locale": "Wechseln Locale",
+	"to-second-page": "Zur zweiten Seite",
+	"error-with-status": "Auf dem Server ist ein Fehler ({{statusCode}}) aufgetreten",
+	"error-without-status": "Auf dem Server ist ein Fehler aufgetreten"
+}
