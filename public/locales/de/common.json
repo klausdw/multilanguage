@@ -3,9 +3,13 @@
 	"keywords": "test DE",
 	"description": "beschreibung DE",
 	"path": "/de",
-	"h1": "Beispiel",
-	"change-locale": "Wechseln Locale",
-	"to-second-page": "Zur zweiten Seite",
+	"hreflang": "de-DE",
+	"home1": "Wir sind ein Unternehmen, das sich auf die Vermittlung von Fachkräften im Gesundheitswesen spezialisiert hat. Unser Hauptziel ist es, unseren Kandidaten zu helfen, ihren Beruf in Deutschland anerkennen lassen zu können, sowohl sie bei ihrer Integration in den deutschen Arbeitsmarkt zu unterstützen.",
+	"home2": "Arzt/Ärztin, Pflegefachfrau/-mann, Pflegehelfer/-rin, mit oder ohne Erfahrung, sind alle herzlich willkommen in unserem Bewerbungsverfahren.",
+	"home3": "AB Connection",
+	"home4": "",
+	"home5": "mehr lesen",
+	"home6": "Kontakt",
 	"error-with-status": "Auf dem Server ist ein Fehler ({{statusCode}}) aufgetreten",
 	"error-without-status": "Auf dem Server ist ein Fehler aufgetreten"
 }

@@ -5,19 +5,15 @@ const Header: React.FC<{
 	keywords: string
 	description: string
 	path: string
-}> = ({ title, keywords, description, path }) => {
+	hreflang: string
+}> = ({ title, keywords, description, path, hreflang }) => {
 	// TODO: define Date in the i18n
 	// create date function with UTC zones.
 	const APP_ROOT_URL = 'https://test.com'
 
 	// Absolute page url
 	const pageUrl = `${APP_ROOT_URL}${path}`
-	const now = new Date()
-	const month = now.getMonth()
-	const year = now.getFullYear()
-	const day = now.getDay()
-	// TODO: test date
-	const date = `${day}/${month}/${year}`
+	const date = new Date().toLocaleString().split(',')[0]
 
 	return (
 		<>
@@ -41,6 +37,7 @@ const Header: React.FC<{
 				<meta property="og:site_name" content="Proper Noun" />
 				<meta property="og:url" content={pageUrl} />
 				<link rel="canonical" href={pageUrl} />
+				<link rel="alternate" href={hreflang} />
 			</Head>
 		</>
 	)

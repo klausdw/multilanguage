@@ -1,45 +1,46 @@
 import { GetStaticProps, NextPage } from 'next'
 import React from 'react'
-import styles from '../styles/Home.module.css'
-
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Header from './src/Header'
+import Navbar from './src/Navbar'
 
 const Home: NextPage = () => {
-	const router = useRouter()
-	const { t } = useTranslation()
+	const { t } = useTranslation('common')
 	return (
 		<>
-			<div className={styles.container}>
-				<Header
-					title={t('title')}
-					keywords={t('keywords')}
-					description={t('description')}
-					path={t('path')}
-				/>
-
-				<div>
-					<Link href="/" locale={router.locale === 'pt' ? 'de' : 'pt'}>
-						<button>{t('change-locale')}</button>
-					</Link>
-					<Link href="/second-page">
-						<button type="button">{t('to-second-page')}</button>
-					</Link>
-				</div>
-
-				<footer className={styles.footer}></footer>
-			</div>
+			<Header
+				title={t('title')}
+				keywords={t('keywords')}
+				description={t('description')}
+				path={t('path')}
+				hreflang={t('hreflang')}
+			/>
+			<Navbar />
+			<main>
+				<h2>{t('home1')}</h2>
+				<h3>{t('home2')}</h3>
+				<p>{t('home3')}</p>
+				<h3>{t('home4')}</h3>
+				<h3>{t('home5')}</h3>
+				<h3>{t('home6')}</h3>
+				<h3>{t('home7')}</h3>
+			</main>
+			<style jsx>
+				{`
+					main {
+						padding: 0 60px;
+						margin-top: 40px;
+					}
+				`}
+			</style>
 		</>
 	)
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
 	props: {
-		...(await serverSideTranslations(locale as string, ['common'])),
+		...(await serverSideTranslations(locale as string, ['common', 'navbar'])),
 	},
 })
 

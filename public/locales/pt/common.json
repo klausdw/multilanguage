@@ -1,11 +1,16 @@
 {
-	"title": "PRINCIPAL | next-i18next",
-	"keywords": "teste em pt",
-	"description": "descricao da pagina em PT",
+	"title": "AB Connection - connectando você à Alemanha | Trabalhar na Alemanha",
+	"keywords": "Trabalhar na Alemanha como Enfermeiro. Enfermeiros na Alemanha. Trabalho para Enfermeiros na Alemanha. Como trabalhar na Alemanha como enfermeiro. Vaga de trabalho para enfermeiros na Alemanha. Auxiliar de Enfermagem na Alemanha. Técnico de Enfermagen na Alemanha. Vagas de trabalho em hopital na Alemanha. Hospitais na Alemanha. Como viver na Alemanha. Como é o trabalho de Enfermagem na Alemanha. Como trabalha um enfermeiro na Alemanha.",
+	"description": "Vaga de trabalho para Enfermeiros na Alemanha. Trabalhar na alemanha como Enfermeiro. Enfermeiros na Alemanha. Trabalhar na Alemanha. Hospitais na Alemanha",
 	"path": "/",
-	"h1": "Exemplo",
-	"change-locale": "Mudar",
-	"to-second-page": "Zur zweiten Seite",
-	"error-with-status": "Auf dem Server ist ein Fehler ({{statusCode}}) aufgetreten",
-	"error-without-status": "Auf dem Server ist ein Fehler aufgetreten"
+	"hreflang": "pt-BR",
+	"home1": "Somos uma empresa especializada na contratação de profissionais da área da saúde para trabalharem na Alemanha.",
+	"home2": "Nosso principal objetivo é auxiliar nossos candidatos a validar sua profissão na Alemanha, obtendo assim a oportunidade de conseguir um trabalho junto a nossas empresas parceiras.",
+	"home3": "Para você Enfermeiro, Técnico ou Auxiliar de enfermagem, que dispõe de formação superior e/ou técnica completa, com ou sem experiência, e está aberto a aprender um novo idioma, conhecer as riquezas da cultura alemã, esta é a sua oportunidade de morar na Europa.",
+	"home4": "AB Connection",
+	"home5": "connectando você à Alemanha",
+	"home6": "Saiba mais",
+	"home7": "Entrar em contato",
+	"error-with-status": "Erro no servidor ({{statusCode}}) ",
+	"error-without-status": "Página nao encontrada"
 }
