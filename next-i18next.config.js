@@ -4,4 +4,6 @@ module.exports = {
 		locales: ['pt', 'de'],
 		localeDetection: false,
 	},
+	//Trans
+	// react: { useSuspense: false },
 }
