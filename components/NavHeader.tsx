@@ -114,6 +114,7 @@ const NavHeader: React.FC = () => {
 															key={item.name}
 															href={item.href}
 															as={item.as}
+															prefetch={false}
 														>
 															<a className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
 																<item.icon
@@ -174,6 +175,7 @@ const NavHeader: React.FC = () => {
 															key={item.name}
 															href={item.href}
 															as={item.as}
+															prefetch={false}
 														>
 															<a className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
 																<item.icon
@@ -248,6 +250,7 @@ const NavHeader: React.FC = () => {
 											key={item.name}
 											href={item.href}
 											as={item.as}
+											prefetch={false}
 										>
 											<a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
 												<item.icon
@@ -265,19 +268,21 @@ const NavHeader: React.FC = () => {
 							<div className="mt-6 py-6 border-t border-b border-transparen">
 								<nav className="grid gap-y-8">
 									{service.map((item) => (
-										<a
+										<Link
 											key={item.name}
 											href={item.href}
-											className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+											prefetch={false}
 										>
-											<item.icon
-												className="flex-shrink-0 h-6 w-6 text-blue-700"
-												aria-hidden="true"
-											/>
-											<span className="ml-3 text-base font-medium text-gray-900">
-												{item.name}
-											</span>
-										</a>
+											<a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+												<item.icon
+													className="flex-shrink-0 h-6 w-6 text-blue-700"
+													aria-hidden="true"
+												/>
+												<span className="ml-3 text-base font-medium text-gray-900">
+													{item.name}
+												</span>
+											</a>
+										</Link>
 									))}
 								</nav>
 							</div>

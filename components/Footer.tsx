@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
 					<Instagram />
 				</div>
 				{footer.map((item) => (
-					<Link key={item.name} href={item.href}>
+					<Link key={item.name} href={item.href} prefetch={false}>
 						<a
 							rel={item.rel}
 							className="flex justify-center items-center text-base font-medium text-white hover:text-gray-400"
