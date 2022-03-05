@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
 
-const ReCaptcha: React.FC<{ captchaValue: boolean }> = ({ captchaValue }) => {
+const ReCaptcha: React.FC<{ captchaValue: boolean }> = () => {
 	const captcha = useRef<ReCAPTCHA>(null)
 
 	const onCaptcha = () => {
