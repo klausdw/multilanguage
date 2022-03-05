@@ -36,8 +36,8 @@ const Candidate: React.FC = () => {
 				hreflang={t('hreflang')}
 				author={t('author')}
 			/>
-			<main className="py-2 bg-white">
-				<div className="px-8 py-4 sm:text-justify lg:text-left">
+			<main className="mx-auto max-w-7xl px-4 py-8 pt-8">
+				<div className="sm:px-6 sm:text-justify lg:text-left">
 					<h1 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl md:text-5xl after:absolute after:w-24 after:h-1 after:ml-0 after:bg-blue-600">
 						<span className="block"> {t('home1')} </span>
 					</h1>
