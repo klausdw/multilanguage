@@ -1,5 +1,5 @@
 import { GetStaticProps } from 'next'
-import { Trans, useTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Header from '@components/Header'
 import FooterInline from '@components/FooterInline'
