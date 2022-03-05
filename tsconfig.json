@@ -1,20 +1,21 @@
 {
 	"compilerOptions": {
 		"allowJs": true,
-		"allowUnreachableCode": false,
-		"allowUnusedLabels": false,
+		"alwaysStrict": true,
 		"baseUrl": ".",
 		"declaration": true,
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 		"isolatedModules": true,
 		"jsx": "preserve",
-		"lib": ["dom", "dom.iterable", "esnext"],
+		"lib": ["dom", "es2019"],
 		"module": "esnext",
 		"moduleResolution": "node",
 		"noEmit": true,
 		"noFallthroughCasesInSwitch": true,
 		"noImplicitReturns": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
 		"paths": {
 			"@components/*": ["components/*"]
 		},
@@ -23,9 +24,9 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
-		"target": "es2018",
+		"target": "esnext",
 		"incremental": true
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "pages/src/Image.js"],
+	"include": ["**/*.ts", "**/*.tsx", "**/*.js"],
 	"exclude": ["node_modules"]
 }
