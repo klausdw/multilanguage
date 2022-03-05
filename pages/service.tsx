@@ -1,12 +1,20 @@
 import { GetStaticProps } from 'next'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { CheckIcon } from '@heroicons/react/solid'
+
 import Header from '@components/Header'
 import FooterInline from '@components/FooterInline'
-import { Check } from '@components/Icons'
 
 const Service: React.FC = () => {
 	const { t } = useTranslation('service')
+	const services = [
+		{ name: t('service3') },
+		{ name: t('service4') },
+		{ name: t('service5') },
+		{ name: t('service6') },
+		{ name: t('service7') },
+	]
 	return (
 		<>
 			<Header
@@ -50,26 +58,12 @@ const Service: React.FC = () => {
 										{t('service2')}
 									</p>
 									<ul className="list-none ml-4text-base text-gray-500 sm:text-lg sm:max-w-xl sm:mx-auto lg:mx-0">
-										<li className="mt-3 mb-4 sm:max-w-xl sm:mx-auto lg:mx-0">
-											<Check />
-											{t('service3')}
-										</li>
-										<li className="mt-3 mb-4">
-											<Check />
-											{t('service4')}
-										</li>
-										<li className="mt-3 mb-4">
-											<Check />
-											{t('service5')}
-										</li>
-										<li className="mt-3 mb-4">
-											<Check />
-											{t('service6')}
-										</li>
-										<li className="mt-3 mb-4">
-											<Check />
-											{t('service7')}
-										</li>
+										{services.map((service) => (
+											<li className="flex items-center mt-3 mb-4">
+												<CheckIcon className="flex-none w-6 h-6 mr-2 text-green-600" />{' '}
+												{service.name}
+											</li>
+										))}
 									</ul>
 								</div>
 							</div>
