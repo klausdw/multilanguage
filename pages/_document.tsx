@@ -1,4 +1,3 @@
-import GoogleAnalytics from 'lib/GoogleAnalytics'
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'
 
 export default class MyDoc extends Document {
