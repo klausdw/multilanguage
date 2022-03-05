@@ -4,18 +4,9 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
-import * as gtag from '../lib/gtag'
 
 const Home: NextPage = () => {
 	const { t } = useTranslation()
-	const addTest = () => {
-		gtag.event({
-			action: 'go_to_test',
-			category: 'home',
-			label: 'Go to test page',
-			value: 'Test Page',
-		})
-	}
 	return (
 		<>
 			<Header
@@ -26,7 +17,6 @@ const Home: NextPage = () => {
 				hreflang={t('hreflang')}
 				author={t('author')}
 			/>
-			<button onClick={() => addTest()}>Test</button>
 			<div className="relative bg-white overflow-hidden">
 				<div className="max-w-7xl mx-auto">
 					<div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
@@ -34,9 +24,11 @@ const Home: NextPage = () => {
 							<source srcSet="/assets/enfermeira.webp" type="image/webp" />
 							<source srcSet="/assets/enfermeira.jpg" type="image/jpeg" />
 							<img
+								width={100}
+								height={100}
 								className="h-full w-full object-cover object-center"
 								src="/assets/enfermeira.jpg"
-								alt=""
+								alt="Enfermeira"
 							/>
 						</picture>
 					</div>
