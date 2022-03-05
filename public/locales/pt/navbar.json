@@ -41,7 +41,7 @@
 	"aboutpath": "sobre-ab-connection",
 	"contactnav": "Entrar em contato",
 	"contacthref": "/contact",
-	"contactpath": "entrar-em-contato",
+	"contactpath": "/entre-em-contato",
 	"flage": "/assets/flags/brasil-portugues-pt-br.png",
 	"flageAlt": "PT-BR"
 }

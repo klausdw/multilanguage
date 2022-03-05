@@ -43,7 +43,7 @@
 	"aboutpath": "about",
 	"contactnav": "Kontakt",
 	"contacthref": "/de/contact",
-	"contactpath": "contact",
+	"contactpath": "/de/kontakt",
 	"flage": "/assets/flags/deutschland-deutsch-de.png",
 	"flageAlt": "DE-DE"
 }
