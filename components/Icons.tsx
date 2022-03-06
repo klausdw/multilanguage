@@ -4,6 +4,7 @@ export const Facebook: React.FC = () => (
 		target="_blank"
 		rel="nofollow"
 		className="mx-2"
+		title="Facebook"
 	>
 		<svg
 			className="w-6 h-6 text-white fill-current"
@@ -16,7 +17,12 @@ export const Facebook: React.FC = () => (
 )
 
 export const Instagram = () => (
-	<a href="https://www.instagram.com/ab.connection/" target="_blank" className="mx-2">
+	<a
+		href="https://www.instagram.com/ab.connection/"
+		target="_blank"
+		className="mx-2"
+		title="Instagram"
+	>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			className="w-6 h-6 text-white fill-current"
@@ -33,6 +39,7 @@ export const Whatsapp = () => (
 		href={`https://api.whatsapp.com/send?${phoneNumber}&text=Hallo%2C%20AB-Connection%20Team!`}
 		target="_blank"
 		className="mx-2"
+		title="Whatsapp"
 	>
 		<svg
 			className="w-7 h-7 text-white fill-current"
