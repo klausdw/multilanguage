@@ -40,7 +40,8 @@ const Service: React.FC = () => {
 							<img
 								className="h-full w-full object-cover object-center"
 								src="/assets/enfermeiro_touch.jpg"
-								alt=""
+								loading="lazy"
+								alt="Enfermeira - Serviços"
 							/>
 						</picture>
 					</div>

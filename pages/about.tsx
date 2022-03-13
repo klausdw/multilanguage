@@ -32,7 +32,8 @@ const About: React.FC = () => {
 							<img
 								className="h-full w-full object-cover object-center"
 								src="/assets/ajuda-homecare.jpg"
-								alt="Enfermeira"
+								alt="Enfermeira - Quem somos"
+								loading="lazy"
 							/>
 						</picture>
 					</div>

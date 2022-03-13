@@ -9,46 +9,36 @@ function classNames(...classes: string[]) {
 
 export const GermanFlage = () => (
 	<a href="/de" title="Deutsch">
-		<span>
-			<picture className="flex items-center justify-center text-blue-700 mt-4">
-				<source
-					srcSet="/assets/flags/deutschland-deutsch-de.webp"
-					type="image/webp"
-				/>
-				<source
-					srcSet="/assets/flags/deutschland-deutsch-de.png"
-					type="image/png"
-				/>
-				<img
-					src="/assets/flags/deutschland-deutsch-de.png"
-					alt="deutsch"
-					loading="lazy"
-				/>
-				<span className="ml-3">DE</span>
-			</picture>
-		</span>
+		<picture className="flex items-center justify-center text-blue-700 mt-4">
+			<source
+				srcSet="/assets/flags/deutschland-deutsch-de.webp"
+				type="image/webp"
+			/>
+			<source srcSet="/assets/flags/deutschland-deutsch-de.png" type="image/png" />
+			<img
+				src="/assets/flags/deutschland-deutsch-de.png"
+				alt="deutsch"
+				loading="lazy"
+			/>
+			<span className="ml-3">DE</span>
+		</picture>
 	</a>
 )
 export const PortugueseFlage = () => (
 	<a href="/" title="Português">
-		<span>
-			<picture className="flex items-center justify-center text-blue-700 mt-4">
-				<source
-					srcSet="/assets/flags/brasil-portugues-pt-br.webp"
-					type="image/webp"
-				/>
-				<source
-					srcSet="/assets/flags/brasil-portugues-pt-br.png"
-					type="image/png"
-				/>
-				<img
-					alt="portugues"
-					loading="lazy"
-					src="/assets/flags/brasil-portugues-pt-br.png"
-				/>
-				<span className="ml-3">PT</span>
-			</picture>
-		</span>
+		<picture className="flex items-center justify-center text-blue-700 mt-4">
+			<source
+				srcSet="/assets/flags/brasil-portugues-pt-br.webp"
+				type="image/webp"
+			/>
+			<source srcSet="/assets/flags/brasil-portugues-pt-br.png" type="image/png" />
+			<img
+				alt="portugues"
+				loading="lazy"
+				src="/assets/flags/brasil-portugues-pt-br.png"
+			/>
+			<span className="ml-3">PT</span>
+		</picture>
 	</a>
 )
 
@@ -65,16 +55,16 @@ const Flage: React.FC = () => {
 								'mt-0.5 group w-14 rounded-md inline-flex items-center',
 							)}
 						>
-							<span>
-								<picture>
-									<source srcSet={t('flage')} type="image/png" />
-									<img
-										src={t('flage')}
-										alt={t('flageAlt')}
-										loading="lazy"
-									/>
-								</picture>
-							</span>
+							<picture>
+								<source srcSet={t('flage')} type="image/png" />
+								<img
+									src={t('flage')}
+									alt={t('flageAlt')}
+									loading="lazy"
+									width={24}
+									height={24}
+								/>
+							</picture>
 							<ChevronDownIcon
 								className={classNames(
 									open ? 'text-blue-600' : 'text-blue-600',

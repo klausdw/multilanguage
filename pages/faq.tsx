@@ -38,7 +38,8 @@ const Faq: React.FC = () => {
 							<img
 								className="h-26 w-full object-cover lg:w-full lg:h-full sm:w-48"
 								src="/assets/enfermeira-perguntas-alemanha.jpg"
-								alt=""
+								alt="Enfermeira - FAQ"
+								loading="lazy"
 							/>
 						</picture>
 					</div>
