@@ -20,9 +20,6 @@ const Home: NextPage = () => {
 				author={t('author')}
 			/>
 			<Image
-				// width={1686}
-				// height={662}
-				// TODO: srcSet
 				src={enfermeira}
 				alt="Enfermeira logo"
 				loading="lazy"
