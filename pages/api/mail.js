@@ -10,7 +10,6 @@ export default (req, res) => {
 	  E-Mail: ${body.email}\r\n
 	  Mensagem: ${body.mensagem}\r\n
 	`
-
 	const data = {
 		to: process.env.EMAIL_FROM,
 		from: process.env.EMAIL_TO,
@@ -19,8 +18,10 @@ export default (req, res) => {
 		text: message,
 		html: message.replace(/\r\n/g, '<br>'),
 	}
-
-	mail.send(data)
-
-	res.status(200).json({ status: 'Ok' })
+	try {
+		mail.send(data)
+		res.status(200).json({ status: 'Ok' })
+	} catch (error) {
+		console.log(error)
+	}
 }
