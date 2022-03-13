@@ -13,6 +13,8 @@
 	"home4": "",
 	"home5": "mehr lesen",
 	"home6": "Kontakt",
+	"error1": "Oh nein",
+	"error": "Seite nicht gefunden",
 	"error-with-status": "Auf dem Server ist ein Fehler ({{statusCode}}) aufgetreten",
 	"error-without-status": "Auf dem Server ist ein Fehler aufgetreten"
 }

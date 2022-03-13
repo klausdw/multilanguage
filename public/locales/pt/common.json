@@ -14,6 +14,8 @@
 	"home5": "connectando você à Alemanha",
 	"home6": "Saiba mais",
 	"home7": "Entrar em contato",
+	"error1": "Oh não",
+	"error": "Infelizmente a página não foi encontrada",
 	"error-with-status": "Erro no servidor ({{statusCode}}) ",
 	"error-without-status": "Página nao encontrada"
 }
