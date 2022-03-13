@@ -17,20 +17,7 @@ export default class MyDoc extends Document {
 		return (
 			<Html lang={defaultLanguage} translate="no">
 				<Head>
-					<script
-						async
-						src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS}`}
-					/>
-					<script
-						dangerouslySetInnerHTML={{
-							__html: `
-							window.dataLayer = window.dataLayer || []
-  							function gtag(){dataLayer.push(arguments)}
-  							gtag('js', new Date());
-  							gtag('config', '${process.env.GOOGLE_ANALYTICS}');
-					  `,
-						}}
-					/>
+					<Gta />
 					<FavIcons />
 				</Head>
 				<body>
@@ -41,6 +28,25 @@ export default class MyDoc extends Document {
 		)
 	}
 }
+
+const Gta = ({}) => (
+	<>
+		<script
+			async
+			src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS}`}
+		/>
+		<script
+			dangerouslySetInnerHTML={{
+				__html: `
+							window.dataLayer = window.dataLayer || []
+  							function gtag(){dataLayer.push(arguments)}
+  							gtag('js', new Date());
+  							gtag('config', '${process.env.GOOGLE_ANALYTICS}');
+					  `,
+			}}
+		/>
+	</>
+)
 
 const FavIcons = () => (
 	<>
