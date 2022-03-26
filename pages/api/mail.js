@@ -4,7 +4,6 @@ mail.setApiKey(process.env.SEND_API_KEY)
 
 export default (req, res) => {
 	const body = JSON.parse(req.body)
-	console.log(body)
 	const message = `
 	  Nome: ${body.nome}\r\n
 	  E-Mail: ${body.email}\r\n
@@ -23,5 +22,8 @@ export default (req, res) => {
 		res.status(200).json({ status: 'Ok' })
 	} catch (error) {
 		console.log(error)
+		if (error.response) {
+			console.error(error.response.body)
+		}
 	}
 }
