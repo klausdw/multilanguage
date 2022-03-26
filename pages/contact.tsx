@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { GetStaticProps } from 'next'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
@@ -8,30 +8,35 @@ import Swal from 'sweetalert2'
 import ReCAPTCHA from 'react-google-recaptcha'
 import FooterContact from '@components/FooterContact'
 
-const Contact: React.FC<{ event: React.MouseEvent<HTMLElement, MouseEvent> }> = () => {
+const Contact: React.FC = () => {
 	const { t } = useTranslation('contact')
+
 	const captcha = useRef<ReCAPTCHA>(null)
+	const [captchaValido, setCaptchaValido] = useState<Boolean>()
+
 	const onCaptcha = () => {
-		captcha.current?.getValue() ? true : false
-		console.log(captcha.current?.getValue())
+		if (captcha.current?.getValue()) return setCaptchaValido(true)
 	}
 	const handleOnSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault()
-		const formData = {}
+
 		if (captcha.current?.getValue()) {
-			// Array.from(event.currentTarget.elements).forEach((field) => {
-			// 	!(field.name ? formData[field.name] : field.value)
-			// })
-			// fetch('/api/mail', {
-			// 	method: 'POST',
-			// 	body: JSON.stringify(formData),
-			// })
+			const formData: any = {}
+			Array.from(event.currentTarget.elements).forEach((field: any) => {
+				!(field.name ? (formData[field.name] = field.value) : field.value)
+			})
+			setCaptchaValido(true)
+			fetch('/api/mail', {
+				method: 'POST',
+				body: JSON.stringify(formData),
+			})
 			console.log(formData)
 			Swal.fire('Enviado !', 'Seu E-Mail foi enviado com sucesso !', 'success')
 			setTimeout(() => {
-				Router.push('/')
+				Router.push('/sucess')
 			}, 3000)
 		} else {
+			setCaptchaValido(false)
 			Swal.fire('Erro !', 'Preencha todos campos !', 'error')
 			console.log('aceite o captcha')
 		}
@@ -103,6 +108,11 @@ const Contact: React.FC<{ event: React.MouseEvent<HTMLElement, MouseEvent> }> = 
 										sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
 										onChange={onCaptcha}
 									/>
+									{captchaValido === false && (
+										<div className="mt-4 bg-red-600 text-white text-center rounded-md py-2">
+											Por favor aceite o captcha
+										</div>
+									)}
 								</div>
 								<button
 									type="submit"
@@ -119,6 +129,7 @@ const Contact: React.FC<{ event: React.MouseEvent<HTMLElement, MouseEvent> }> = 
 		</>
 	)
 }
+
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
 	props: {
 		...(await serverSideTranslations(locale as string, [
