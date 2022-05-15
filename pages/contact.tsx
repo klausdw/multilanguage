@@ -53,76 +53,77 @@ const Contact: React.FC = () => {
 				author={t('author')}
 			/>
 			<main className="mx-auto max-w-7xl px-4 py-8 pt-8">
-				<div className="sm:text-justify lg:text-left">
-					<h1 className="px-4 text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl after:absolute after:w-24 after:h-1 after:ml-0 after:bg-blue-600">
-						<span className="block">{t('contact')}</span>
+				<div className="sm:px-6 sm:text-justify lg:text-left">
+					<h1 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl md:text-5xl after:absolute after:w-24 after:h-1 after:ml-0 after:bg-blue-600">
+						<span className="block"> {t('contact')} </span>
 					</h1>
-					<div className="flex justify-center rounded p-6">
-						<div className="w-full max-w-sm rounded">
-							<form
-								className="bg-white rounded shadow px-8 pt-6 pb-8 border"
-								method="post"
-								onSubmit={handleOnSubmit}
+				</div>
+				<div className="flex mx-auto justify-center rounded mt-6 sm:px-6">
+					<form
+						className="w-full bg-white rounded shadow px-4 pt-4 pb-6 sm:px-8 border"
+						method="post"
+						onSubmit={handleOnSubmit}
+					>
+						<div className="mb-4">
+							<label
+								className="block text-gray-700 text-sm font-bold mb-2"
+								htmlFor="nome"
 							>
-								<div className="mb-4">
-									<label
-										className="block text-gray-700 text-sm font-bold mb-2"
-										htmlFor="nome"
-									>
-										{t('contact1')}
-									</label>
-									<input
-										className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 "
-										type="text"
-										name="nome"
-									/>
-								</div>
-								<div className="mb-4">
-									<label
-										className="block text-gray-700 text-sm font-bold mb-2"
-										htmlFor="email"
-									>
-										{t('contact2')}
-									</label>
-									<input
-										className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 "
-										type="email"
-										name="email"
-									/>
-								</div>
-								<div className="mb-4">
-									<label
-										className="block text-gray-700 text-sm font-bold mb-2"
-										htmlFor="mensagem"
-									>
-										{t('contact3')}
-									</label>
-									<textarea
-										className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 "
-										name="mensagem"
-									/>
-								</div>
-								<div className="my-auto">
-									<ReCAPTCHA
-										ref={captcha}
-										sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-										onChange={onCaptcha}
-									/>
-									{captchaValido === false && (
-										<div className="mt-4 bg-red-600 text-white text-center rounded-md py-2">
-											Por favor aceite o captcha
-										</div>
-									)}
-								</div>
-								<button
-									type="submit"
-									className="rounded bg-blue-600 w-full mt-5 p-2 text-white uppercase hover:bg-blue-900"
-								>
-									{t('contact4')}
-								</button>
-							</form>
+								{t('contact1')}
+							</label>
+							<input
+								className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 "
+								type="text"
+								name="nome"
+								required
+							/>
 						</div>
-					</div>
+						<div className="mb-4">
+							<label
+								className="block text-gray-700 text-sm font-bold mb-2"
+								htmlFor="email"
+							>
+								{t('contact2')}
+							</label>
+							<input
+								className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 "
+								type="email"
+								name="email"
+								required
+							/>
+						</div>
+						<div className="mb-4">
+							<label
+								className="block text-gray-700 text-sm font-bold mb-2"
+								htmlFor="mensagem"
+							>
+								{t('contact3')}
+							</label>
+							<textarea
+								className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 "
+								name="mensagem"
+								required
+							/>
+						</div>
+						<div>
+							<ReCAPTCHA
+								ref={captcha}
+								sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+								onChange={onCaptcha}
+							/>
+							{captchaValido === false && (
+								<div className="mt-4 bg-red-600 text-white text-center rounded-md py-2">
+									Por favor aceite o captcha
+								</div>
+							)}
+						</div>
+						<button
+							type="submit"
+							className="rounded bg-blue-600 w-full mt-5 p-2 text-white uppercase hover:bg-blue-900"
+						>
+							{t('contact4')}
+						</button>
+					</form>
 				</div>
 			</main>
 			<FooterContact />
