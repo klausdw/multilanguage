@@ -39,16 +39,16 @@ const Home: NextPage = () => {
 					<h3 className="mt-3 text-xl text-gray-500 sm:mt-5 sm:text-2xl sm:max-w-xl sm:mx-auto md:mt-5 md:text-2xl lg:mx-0">
 						{t('home3')}
 					</h3>
-					<div className="flex justify-center items-center space-x-10 mb-10 mt-10 md:space-x-0">
+					<div className="flex justify-center items-center space-x-10 mb-10 mt-10">
 						<a
 							href={t('candidatepath')}
-							className="max-w-md px-4 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-800 md:py-4 md:px-4 md:text-lg md:items-center md:flex"
+							className="max-w-md px-4 py-4 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-800 md:text-lg md:items-center md:flex"
 						>
 							{t('home5')}
 						</a>
 						<a
 							href={t('contactpath')}
-							className="px-8 py-3 border border-ab text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-200 md:py-4 md:px-4 md:text-lg"
+							className="px-8 py-4 border border-ab text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-200 md:text-lg"
 						>
 							{t('home6')}
 						</a>
