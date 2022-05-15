@@ -1,26 +1,52 @@
 import { Trans, useTranslation } from 'next-i18next'
+import { Facebook, Whatsapp, Location } from './Icons'
 
 const FooterContact = () => {
 	const { t } = useTranslation('contact')
 	return (
-		<div className="mx-6 mt-6 border-2 border-blue-200 shadow rounded">
-			<div className="flex p-4 mb-8 justify-center">
-				<p className="mr-10">logo</p>
+		<div className="mx-4 p-4 px-10 bg-blue-600 shadow rounded sm:mx-10">
+			<div className="flex flex-wrap mx-auto py-4">
+				<Facebook />
 				<Trans
 					i18nKey="contact5"
 					t={t}
 					components={{
-						strong: <a href={t('contact6')} className="text-blue-600"></a>,
+						strong: (
+							<a
+								href={t('contact6')}
+								className="my-auto text-white hover:text-green-400"
+							></a>
+						),
 					}}
 				/>
 			</div>
-			<div className="flex">
-				<p>logo123</p>
+			<div className="flex flex-wrap py-4">
+				<Whatsapp />
 				<Trans
 					i18nKey="contact7"
 					t={t}
 					components={{
-						strong: <a href={t('contact8')} className="text-blue-600"></a>,
+						strong: (
+							<a
+								href={t('contact8')}
+								className="my-auto text-white hover:text-green-400"
+							></a>
+						),
+					}}
+				/>
+			</div>
+			<div className="flex flex-wrap py-4">
+				<Location />
+				<Trans
+					i18nKey="contact9"
+					t={t}
+					components={{
+						strong: (
+							<a
+								href={t('contact9')}
+								className="my-auto text-white hover:text-green-400"
+							></a>
+						),
 					}}
 				/>
 			</div>
