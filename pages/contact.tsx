@@ -30,7 +30,6 @@ const Contact: React.FC = () => {
 				method: 'POST',
 				body: JSON.stringify(formData),
 			})
-			console.log(formData)
 			Swal.fire('Enviado !', 'Seu E-Mail foi enviado com sucesso !', 'success')
 			setTimeout(() => {
 				Router.push('/sucess')
@@ -38,7 +37,6 @@ const Contact: React.FC = () => {
 		} else {
 			setCaptchaValido(false)
 			Swal.fire('Erro !', 'Preencha todos campos !', 'error')
-			console.log('aceite o captcha')
 		}
 	}
 
