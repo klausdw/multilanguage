@@ -16,5 +16,8 @@
 	"error1": "Oh nein",
 	"error": "Seite nicht gefunden",
 	"error-with-status": "Auf dem Server ist ein Fehler ({{statusCode}}) aufgetreten",
-	"error-without-status": "Auf dem Server ist ein Fehler aufgetreten"
+	"error-without-status": "Auf dem Server ist ein Fehler aufgetreten",
+	"success-title": "AB Connection - E-Mail gesendet",
+	"success": "Deine E-Mail wurde erfolgreich gesendet",
+	"success1": "Deine Nachricht wird in kürze bearbeitet."
 }
