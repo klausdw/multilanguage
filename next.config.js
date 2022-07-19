@@ -24,6 +24,10 @@ const nextConfigs = {
 		deviceSizes: [640, 768, 1024, 1280, 1536],
 		formats: ['image/webp'],
 	},
+	env: {
+		EMAIL_FROM: process.env.EMAIL_FROM,
+		EMAIL_PASS: process.env.EMAIL_PASS,
+	},
 }
 
 module.exports = withPlugins([[withBundleAnalyzer], nextConfigs])
