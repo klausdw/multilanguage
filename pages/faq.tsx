@@ -54,9 +54,9 @@ const Faq: React.FC = () => {
 										🙋‍♀️ {t('faq2')} 🙋
 									</h1>
 								</div>
-								{faqs?.map((faq) => (
+								{faqs.map((faq) => (
 									<div className="max-w-lg mx-auto my-6" key={faq.ask}>
-										<details className="open:border-2 open:border-blue-100 open:ring-1 open:ring-black/5 open:ring-white/10 open:shadow-lg p-6 rounded-lg bg-white border border-blue-200">
+										<details className="cursor-pointer open:border-2 open:border-blue-100 open:ring-1 open:ring-black/5 open:ring-white/10 open:shadow-lg bg-blue-400">
 											<summary className="text-2xl tracking-tight font-extrabold text-gray-700 sm:text-xl md:text-xl select-none">
 												{faq.ask ? <>{faq.ask}</> : null}
 											</summary>
