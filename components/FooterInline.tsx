@@ -2,7 +2,7 @@ import { Facebook, Instagram, Whatsapp } from './Icons'
 
 const FooterInline: React.FC = () => {
 	return (
-		<footer className="w-full py-6 px-5 space-y-6 bg-blue-600">
+		<footer className="w-full py-6 px-5 space-y-6 bg-blue-600 fixed bottom-0">
 			<div className="flex justify-center items-center text-white">
 				<Facebook />
 				<Instagram />

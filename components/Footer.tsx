@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
 		},
 	]
 	return (
-		<footer className="w-full py-6 px-5 space-y-6 bg-blue-600">
+		<footer className="w-full py-6 px-5 space-y-6 bg-blue-600 fixed bottom-0">
 			<div className="grid grid-cols-1 gap-y-2 sm:grid-cols-4">
 				<div className="flex justify-center text-white">
 					<div className="flex justify-center items-center">
