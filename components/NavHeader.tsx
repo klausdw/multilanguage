@@ -307,7 +307,7 @@ const NavHeader: React.FC = () => {
 								</nav>
 							</div>
 						</div>
-						<div className="py-6 px-5 space-y-6">
+						{/* <div className="py-6 px-5 space-y-6">
 							<a
 								href="#"
 								className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700"
@@ -320,7 +320,7 @@ const NavHeader: React.FC = () => {
 									Sign in
 								</a>
 							</p>
-						</div>
+						</div> */}
 					</div>
 				</Popover.Panel>
 			</Transition>
