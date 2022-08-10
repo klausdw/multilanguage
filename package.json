@@ -5,6 +5,7 @@
 		"analyze": "cross-env ANALYZE=true npm run build",
 		"dev": "next dev",
 		"build": "next build",
+		"export": "next build && next export",
 		"start": "next start",
 		"check-types": "tsc --pretty --noEmit",
 		"check-format": "prettier --check .",
