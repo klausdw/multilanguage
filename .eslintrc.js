@@ -8,6 +8,8 @@ module.exports = {
 		'prettier/@typescript-eslint',
 		'plugin:prettier/recommended',
 		'plugin:react/recommended',
+		'next',
+		'next/core-web-vitals',
 	],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
@@ -18,7 +20,7 @@ module.exports = {
 		sourceType: 'module',
 	},
 	plugins: ['react', '@typescript-eslint'],
-	rules: {},
+	rules: { '@next/next/no-img-element': 'off' },
 	settings: {
 		react: {
 			version: 'latest',
