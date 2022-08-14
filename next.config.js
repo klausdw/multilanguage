@@ -27,6 +27,7 @@ const nextConfigs = {
 	env: {
 		EMAIL_FROM: process.env.EMAIL_FROM,
 		EMAIL_PASS: process.env.EMAIL_PASS,
+		GOOGLE_ANALYTICS: process.env.GOOGLE_ANALYTICS,
 	},
 }
 
