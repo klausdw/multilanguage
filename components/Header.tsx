@@ -10,7 +10,7 @@ const Header: React.FC<{
 }> = ({ title, keywords, description, path, hreflang, author }) => {
 	// TODO: define Date in the i18n
 	// create date function with UTC zones.
-	const APP_ROOT_URL = 'https://test.com'
+	const APP_ROOT_URL = 'https://abconnection.de'
 
 	// Absolute page url
 	const pageUrl = `${APP_ROOT_URL}${path}`
