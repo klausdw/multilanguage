@@ -106,7 +106,7 @@ const Contact: React.FC = () => {
 						<div>
 							<ReCAPTCHA
 								ref={captcha}
-								sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+								sitekey="6Ld6jnchAAAAAOslS2K7zENTjRMXCyevUe4De9Nu"
 								onChange={onCaptcha}
 							/>
 							{captchaValido === false && (
