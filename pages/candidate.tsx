@@ -45,21 +45,25 @@ const Candidate: React.FC = () => {
 				<div className="max-w-7xl mt-2 mb-10 mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="mt-10">
 						<dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-20 md:gap-y-20">
-							{candidate?.map((item) => (
-								<div key={item.name} className="relative">
+							{candidate?.map(({ name, description, desc1, desc2 }) => (
+								<div key={name} className="relative">
 									<dt>
-										<p className="text-lg leading-6 font-medium text-gray-800 border-b border-blue-600">
-											{item.name}
-										</p>
+										{name ? (
+											<p className="text-lg leading-6 font-medium text-gray-800 border-b border-blue-600">
+												{name}
+											</p>
+										) : null}
 									</dt>
+									{description ? (
+										<dd className="mt-2 px-4 text-base text-gray-700">
+											✅ {description}
+										</dd>
+									) : null}
 									<dd className="mt-2 px-4 text-base text-gray-700">
-										✅ {item.description}
+										{desc1 ? <> ✅ {desc1} </> : null}
 									</dd>
 									<dd className="mt-2 px-4 text-base text-gray-700">
-										{item.desc1 ? <> ✅ {item.desc1} </> : null}
-									</dd>
-									<dd className="mt-2 px-4 text-base text-gray-700">
-										{item.desc2 ? <> ✅ {item.desc2} </> : null}
+										{desc2 ? <> ✅ {desc2} </> : null}
 									</dd>
 								</div>
 							))}
