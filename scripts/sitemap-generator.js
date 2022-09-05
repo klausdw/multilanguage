@@ -6,8 +6,8 @@ function addPage(page) {
 	return `<url>
 				<loc>${`${process.env.WEBSITE_URL}${route}`}</loc>
 				<lastmod>${new Date().toISOString()}</lastmod>
-				<changefreq>monthly</changefreq>
-				<priority>1.0</priority>
+				<changefreq>daily</changefreq>
+				<priority>0.9</priority>
 			</url>`
 }
 function addGermanPage(page) {
@@ -16,8 +16,8 @@ function addGermanPage(page) {
 	return ` <url>
 				<loc>${`${process.env.WEBSITE_URL}/de${route}`}</loc>
 				<lastmod>${new Date().toISOString()}</lastmod>
-				<changefreq>monthly</changefreq>
-				<priority>1.0</priority>
+				<changefreq>daily</changefreq>
+				<priority>0.9</priority>
 			</url>`
 }
 

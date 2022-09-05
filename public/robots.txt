@@ -1,0 +1,6 @@
+Sitemap: https://abconnection.de
+
+User-agent: *
+Allow: /*
+
+Disallow: /api/*
