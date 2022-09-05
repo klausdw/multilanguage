@@ -19,5 +19,6 @@
 	"error-without-status": "Auf dem Server ist ein Fehler aufgetreten",
 	"success-title": "AB Connection - E-Mail gesendet",
 	"success": "Deine E-Mail wurde erfolgreich gesendet",
-	"success1": "Deine Nachricht wird in kürze bearbeitet."
+	"success1": "Deine Nachricht wird in kürze bearbeitet.",
+	"whats-app": "Für eventuellen Fragen schreiben Sie uns eine Nachricht über den WhatsApp Button."
 }
