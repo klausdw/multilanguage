@@ -38,21 +38,9 @@ const FooterContact = () => {
 						}}
 					/>
 				</div>
-				<div className="flex flex-wrap py-4">
+				<div className="flex flex-wrap py-4 text-white my-auto">
 					<Location />
-					<Trans
-						i18nKey="contact9"
-						t={t}
-						components={{
-							strong: (
-								<a
-									href={t('contact9')}
-									rel="nofollow"
-									className="my-auto text-white hover:text-green-400"
-								></a>
-							),
-						}}
-					/>
+					{t('contact9')}
 				</div>
 			</div>
 		</div>
