@@ -52,15 +52,15 @@ const Home: NextPage = () => {
 						objectFit="cover"
 					/>
 					<div className="px-0 pt-8 sm:px-8 lg:py-0">
-						<h1 className="text-xl text-gray-500 sm:text-2xl md:text-2xl lg:mx-0">
+						<h2 className="text-xl text-gray-500 sm:text-2xl md:text-2xl lg:mx-0">
 							{t('home1')}
-						</h1>
-						<h2 className="mt-3 text-xl text-gray-500 sm:mt-5 sm:text-2xl md:mt-5 md:text-2xl lg:mx-0">
-							{t('home2')}
 						</h2>
 						<h3 className="mt-3 text-xl text-gray-500 sm:mt-5 sm:text-2xl md:mt-5 md:text-2xl lg:mx-0">
-							{t('home3')}
+							{t('home2')}
 						</h3>
+						<h4 className="mt-3 text-xl text-gray-500 sm:mt-5 sm:text-2xl md:mt-5 md:text-2xl lg:mx-0">
+							{t('home3')}
+						</h4>
 						<div className="grid grid-cols-1 sm:grid-cols-2 mt-2 space-x-0 sm:space-x-4 space-y-2 sm:space-y-0">
 							<a
 								href={t('candidatepath')}
@@ -77,10 +77,9 @@ const Home: NextPage = () => {
 						</div>
 					</div>
 				</div>
-				<h4 className="mt-10 mb-40 sm:mb-20 sm:mt-6">
-					*Para eventuais duvida(s) e/ou pergunta(s) clique no botão do Whats
-					App e deixe sua mensagem.
-				</h4>
+				<h5 className="mt-10 mb-40 px-8 xs:px-0 sm:px-0 sm:mb-20 sm:mt-6">
+					{t('whats-app')}
+				</h5>
 			</main>
 			<Footer />
 		</>

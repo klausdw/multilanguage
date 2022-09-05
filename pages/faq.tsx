@@ -65,9 +65,9 @@ const Faq: React.FC = () => {
 									<span className="block"> {t('faq1')} </span>
 								</h1>
 								<div className="mt-6 mb-4 max-w-lg mx-auto">
-									<h1 className="text-center underline text-xl tracking-tight font-extrabold text-gray-900 md:text-2xl select-none">
+									<h2 className="text-center underline text-xl tracking-tight font-extrabold text-gray-900 md:text-2xl select-none">
 										🙋‍♀️ {t('faq2')} 🙋
-									</h1>
+									</h2>
 								</div>
 								{faqs.map((faq) => (
 									<div className="max-w-lg mx-auto my-6" key={faq.ask}>
@@ -82,10 +82,10 @@ const Faq: React.FC = () => {
 									</div>
 								))}
 							</div>
-							<h4 className="mt-10 mb-40 sm:mb-20 sm:mt-6">
+							<h3 className="mt-10 mb-40 sm:mb-20 sm:mt-6">
 								*Para eventuais duvida(s) e/ou pergunta(s) clique no botão
 								do Whats App e deixe sua mensagem.
-							</h4>
+							</h3>
 						</main>
 					</div>
 				</div>
