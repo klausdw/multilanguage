@@ -36,13 +36,13 @@ const NavHeader: React.FC = () => {
 			as: t('faqpath'),
 			icon: NewspaperIcon,
 		},
-		{
-			name: t('blog1'),
-			description: t('blognav'),
-			href: t('candidatehref'),
-			as: t('blogpath'),
-			icon: NewspaperIcon,
-		},
+		// {
+		// 	name: t('blog1'),
+		// 	description: t('blognav'),
+		// 	href: t('candidatehref'),
+		// 	as: t('blogpath'),
+		// 	icon: NewspaperIcon,
+		// },
 	]
 	const service = [
 		{
