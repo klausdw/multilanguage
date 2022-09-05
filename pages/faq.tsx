@@ -83,8 +83,7 @@ const Faq: React.FC = () => {
 								))}
 							</div>
 							<h3 className="mt-10 mb-40 sm:mb-20 sm:mt-6">
-								*Para eventuais duvida(s) e/ou pergunta(s) clique no botão
-								do Whats App e deixe sua mensagem.
+								{t('whats-app')}
 							</h3>
 						</main>
 					</div>
