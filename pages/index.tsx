@@ -20,7 +20,7 @@ const Home: NextPage = () => {
 				hreflang={t('hreflang')}
 				author={t('author')}
 			/>
-			<main className="relative mx-auto max-w-7xl px-4 py-8 pt-8">
+			<main className="relative mx-auto max-w-7xl px-4 py-8">
 				<div className="fixed right-1 p-2 bottom-1 mr-2 mb-40 lg:mr-10 sm:mb-20 bg-whats-app border-4 border-whats-app rounded-full text-white z-10">
 					<a
 						href="https://wa.me/+491736218918"
@@ -50,6 +50,7 @@ const Home: NextPage = () => {
 						alt="Enfermeira logo"
 						loading="lazy"
 						objectFit="cover"
+						priority={false}
 					/>
 					<div className="px-0 pt-8 sm:px-8 lg:py-0">
 						<h2 className="text-xl text-gray-500 sm:text-2xl md:text-2xl lg:mx-0">

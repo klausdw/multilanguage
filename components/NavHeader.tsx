@@ -67,7 +67,7 @@ const NavHeader: React.FC = () => {
 					<div className="flex justify-start lg:w-0 lg:flex-1">
 						<Logo />
 					</div>
-					<div className="-mr-2 -my-2 md:hidden">
+					<div className="md:hidden">
 						<Popover.Button className="bg-white rounded-md border border-blue-600 rounded p-2 inline-flex items-center justify-center text-blue-600 focus-focus:none">
 							<span className="sr-only">Open menu</span>
 							<MenuIcon className="h-6 w-6" aria-hidden="true" />
