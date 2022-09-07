@@ -67,4 +67,4 @@ const nextConfigs = {
 	},
 }
 
-module.exports = withPlugins([[withBundleAnalyzer], nextConfigs])
+module.exports = withPlugins([withBundleAnalyzer], nextConfigs)
