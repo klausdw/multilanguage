@@ -4,6 +4,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 	enabled: process.env.ANALYZE === 'true',
 })
 const webpack = require('webpack')
+const withPreact = require('next-plugin-preact')
 
 const securityHeaders = [
 	{ key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
@@ -67,4 +68,4 @@ const nextConfigs = {
 	},
 }
 
-module.exports = withPlugins([withBundleAnalyzer], nextConfigs)
+module.exports = withPlugins([withBundleAnalyzer, withPreact], nextConfigs)
