@@ -36,7 +36,7 @@ export const Instagram = () => (
 const phoneNumber = '+491747021549'
 export const Whatsapp = () => (
 	<a
-		href={`https://api.whatsapp.com/send?${phoneNumber}&text=Hallo%2C%20AB-Connection!`}
+		href={`https://wa.me/${phoneNumber}`}
 		target="_blank"
 		className="mx-2"
 		title="Whatsapp"
