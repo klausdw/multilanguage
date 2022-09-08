@@ -5,7 +5,7 @@ export const addTest = () => {
 		action: 'go_to_test',
 		category: 'home',
 		label: 'Go to test page',
-		value: 'Test Page',
+		value: 1,
 	})
 }
 // <button onClick={() => addTest()}>Test</button>
