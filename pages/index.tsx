@@ -47,10 +47,9 @@ const Home: NextPage = () => {
 				<div className="mt-4 grid grid-cols-1 lg:grid-cols-2">
 					<Image
 						src={enfermeira}
-						alt="Enfermeira logo"
-						loading="lazy"
+						alt="Enfermeira na Alemanha"
 						objectFit="cover"
-						priority={false}
+						priority
 					/>
 					<div className="px-0 pt-8 sm:px-8 lg:py-0">
 						<h2 className="text-xl text-gray-500 sm:text-2xl md:text-2xl lg:mx-0">
