@@ -1,0 +1,51 @@
+# add Preact to next.config
+# why preact ?
+
+because preact reduce the first load js and chunks size
+
+#PREACT
+Page                                       Size     First Load JS
+┌ ● /                                      7.56 kB        82.3 kB
+├   /_app                                  0 B            74.7 kB
+├ ○ /404                                   3.08 kB        77.8 kB
+├ ● /about                                 3.12 kB        77.8 kB
+├ λ /api/mail                              0 B            74.7 kB
+├ ● /candidate                             3.14 kB        77.8 kB
+├ ● /contact                               25.7 kB         100 kB
+├ ● /faq                                   3.54 kB        78.2 kB
+├ ● /service                               3.23 kB        77.9 kB
+└ ● /sucess                                912 B          75.6 kB
++ First Load JS shared by all              74.7 kB
+  ├ chunks/framework-8c96ea0cad166fdd.js   8.58 kB
+  ├ chunks/main-10e62ee0f6efaafb.js        32.8 kB
+  ├ chunks/pages/_app-e04b2ac3963f8996.js  32.5 kB
+  ├ chunks/webpack-d7b038a63b619762.js     771 B
+  └ css/3dde4817b053f926.css               4.44 kB
+
+λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+●  (SSG)     automatically generated as static HTML + JSON (uses getStaticProps)
+
+#REACT
+Page                                       Size     First Load JS
+┌ ● /                                      7.56 kB        116 kB
+├   /_app                                  0 B            108 kB
+├ ○ /404                                   3.08 kB        111 kB
+├ ● /about                                 3.12 kB        111 kB
+├ λ /api/mail                              0 B            108 kB
+├ ● /candidate                             3.14 kB        111 kB
+├ ● /contact                               25.7 kB         134 kB
+├ ● /faq                                   3.54 kB        112 kB
+├ ● /service                               3.23 kB        111 kB
+└ ● /sucess                                912 B          109 kB
++ First Load JS shared by all              108 kB
+  ├ chunks/framework-8c96ea0cad166fdd.js   42 kB
+  ├ chunks/main-10e62ee0f6efaafb.js        32.9 kB
+  ├ chunks/pages/_app-e04b2ac3963f8996.js  32.5 kB
+  ├ chunks/webpack-d7b038a63b619762.js     771 B
+  └ css/3dde4817b053f926.css               4.44 kB
+
+λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+●  (SSG)     automatically generated as static HTML + JSON (uses getStaticProps)
+
