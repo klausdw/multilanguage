@@ -4,7 +4,7 @@ function addPage(page) {
 	const path = page.replace('pages', '').replace('.tsx', '').replace('.mdx', '')
 	const route = path === '/index' ? '' : path
 	return `<url>
-				<loc>${`htpps://abconnection.de${route}`}</loc>
+				<loc>${`https://abconnection.de${route}`}</loc>
 				<lastmod>${new Date().toISOString()}</lastmod>
 				<changefreq>daily</changefreq>
 				<priority>0.9</priority>
@@ -14,7 +14,7 @@ function addGermanPage(page) {
 	const path = page.replace('pages', '').replace('.tsx', '').replace('.mdx', '')
 	const route = path === '/index' ? '' : path
 	return ` <url>
-				<loc>${`htpps://abconnection.de/de${route}`}</loc>
+				<loc>${`https://abconnection.de/de${route}`}</loc>
 				<lastmod>${new Date().toISOString()}</lastmod>
 				<changefreq>daily</changefreq>
 				<priority>0.9</priority>
