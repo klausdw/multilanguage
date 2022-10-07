@@ -1,45 +1,45 @@
-import React, { useRef, useState } from 'react'
 import { GetStaticProps } from 'next'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Header from '@components/Header'
 import Router from 'next/router'
 import Swal from 'sweetalert2'
-import ReCAPTCHA from 'react-google-recaptcha'
 import FooterContact from '@components/FooterContact'
 
 const Contact: React.FC = () => {
 	const { t } = useTranslation('contact')
 
-	const captcha = useRef<ReCAPTCHA>(null)
-	const [captchaValido, setCaptchaValido] = useState<Boolean>()
-
-	const onCaptcha = () => {
-		if (captcha.current?.getValue()) return setCaptchaValido(true)
-	}
-	const handleOnSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault()
+		const target = event.target as typeof event.target & {
+			name: { value: string }
+			email: { value: string }
+			message: { value: string }
+			phone: { value: number }
+		}
+		const data = {
+			name: target.name.value,
+			email: target.email.value,
+			message: target.message.value,
+			phone: target.phone.value,
+		}
+		if (data.phone >= 0) {
+			return
+		}
 
-		if (captcha.current?.getValue()) {
-			const formData: any = {}
-			Array.from(event.currentTarget.elements).forEach((field: any) => {
-				!(field.name ? (formData[field.name] = field.value) : field.value)
-			})
-			setCaptchaValido(true)
+		try {
 			fetch('/api/mail', {
 				method: 'POST',
-				body: JSON.stringify(formData),
+				body: JSON.stringify(data),
 			})
 			Swal.fire('Enviado !', 'Seu E-Mail foi enviado com sucesso !', 'success')
 			setTimeout(() => {
 				Router.push('/sucess')
 			}, 3000)
-		} else {
-			setCaptchaValido(false)
+		} catch (error) {
 			Swal.fire('Erro !', 'Preencha todos campos !', 'error')
 		}
 	}
-
 	return (
 		<>
 			<Header
@@ -60,19 +60,19 @@ const Contact: React.FC = () => {
 					<form
 						className="w-full bg-white rounded shadow px-4 pt-4 pb-6 sm:px-8 border"
 						method="post"
-						onSubmit={handleOnSubmit}
+						onSubmit={handleSubmit}
 					>
 						<div className="mb-4">
 							<label
 								className="block text-gray-700 text-sm font-bold mb-2"
-								htmlFor="nome"
+								htmlFor="name"
 							>
 								{t('contact1')}
 							</label>
 							<input
 								className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 "
 								type="text"
-								name="nome"
+								name="name"
 								required
 							/>
 						</div>
@@ -93,28 +93,23 @@ const Contact: React.FC = () => {
 						<div className="mb-4">
 							<label
 								className="block text-gray-700 text-sm font-bold mb-2"
-								htmlFor="mensagem"
+								htmlFor="message"
 							>
 								{t('contact3')}
 							</label>
 							<textarea
 								className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 "
-								name="mensagem"
+								name="message"
 								required
 							/>
 						</div>
-						<div>
-							<ReCAPTCHA
-								ref={captcha}
-								sitekey="6Ld6jnchAAAAAOslS2K7zENTjRMXCyevUe4De9Nu"
-								onChange={onCaptcha}
-							/>
-							{captchaValido === false && (
-								<div className="mt-4 bg-red-600 text-white text-center rounded-md py-2">
-									Por favor aceite o captcha
-								</div>
-							)}
-						</div>
+						{/* B */}
+						<input
+							className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 hidden"
+							type="number"
+							name="phone"
+							minLength={5}
+						/>
 						<button
 							type="submit"
 							className="rounded bg-blue-600 w-full mt-5 p-2 text-white uppercase hover:bg-blue-900"
