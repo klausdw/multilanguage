@@ -8,17 +8,14 @@ const Footer: React.FC = () => {
 		{
 			name: t('copyright'),
 			href: '/copyright',
-			rel: 'nofollow',
 		},
 		{
 			name: t('privacy'),
 			href: '/privacy',
-			rel: 'nofollow',
 		},
 		{
 			name: t('abconnection'),
 			href: '/',
-			rel: 'nofollow',
 		},
 	]
 	return (
@@ -34,7 +31,7 @@ const Footer: React.FC = () => {
 				{footer.map((item) => (
 					<Link key={item.name} href={item.href}>
 						<a
-							rel={item.rel}
+							rel="nofollow"
 							className="flex justify-center items-center text-base font-medium text-white hover:text-gray-400"
 						>
 							{item.name}
