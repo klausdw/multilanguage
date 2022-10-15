@@ -63,12 +63,10 @@ const NavHeader: React.FC = () => {
 	return (
 		<Popover className="relative bg-white">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6">
-				<div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
-					<div className="flex justify-start lg:w-0 lg:flex-1">
-						<Logo />
-					</div>
+				<div className="flex justify-between items-center border-b-2 border-gray-100 py-4 md:justify-start md:space-x-10">
+					<Logo />
 					<div className="md:hidden">
-						<Popover.Button className="bg-white rounded-md border border-blue-600 rounded p-2 inline-flex items-center justify-center text-blue-600 focus-focus:none">
+						<Popover.Button className="bg-white border border-blue-600 rounded p-2 inline-flex items-center justify-center text-blue-600 focus-focus:none">
 							<span className="sr-only">Open menu</span>
 							<MenuIcon className="h-6 w-6" aria-hidden="true" />
 						</Popover.Button>
@@ -201,7 +199,7 @@ const NavHeader: React.FC = () => {
 							as={t('contactpath')}
 							prefetch={false}
 						>
-							<a className="text-base text-lg font-medium text-blue-600 hover:text-blue-900">
+							<a className="text-lg font-medium text-blue-600 hover:text-blue-900">
 								{t('contact1')}
 							</a>
 						</Link>
@@ -300,7 +298,7 @@ const NavHeader: React.FC = () => {
 											{t('contact1')}
 										</span>
 									</a>
-									<div className="flex space-x-10 -mt-5">
+									<div className="flex space-x-6 -mt-5 border-t">
 										<PortugueseFlage />
 										<GermanFlage />
 									</div>
