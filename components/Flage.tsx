@@ -2,73 +2,52 @@ import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import { useTranslation } from 'next-i18next'
+import Image from 'next/image'
+import ptBr from '../public/assets/flags/brasil.png'
+import deDe from '../public/assets/flags/deutschland.png'
 
 function classNames(...classes: string[]) {
 	return classes.filter(Boolean).join(' ')
 }
 
 export const GermanFlage = () => (
-	<a href="/de" title="Deutsch">
-		<picture className="flex items-center justify-center text-blue-700 mt-4">
-			<source
-				srcSet="/assets/flags/deutschland-deutsch-de.webp"
-				type="image/webp"
-			/>
-			<source srcSet="/assets/flags/deutschland-deutsch-de.png" type="image/png" />
-			<img
-				src="/assets/flags/deutschland-deutsch-de.png"
-				alt="deutsch"
-				loading="lazy"
-			/>
-			<span className="ml-3">DE</span>
-		</picture>
-	</a>
+	<div className="relative h-6 w-6 flex items-center justify-center text-blue-700 mt-2">
+		<a href="/de" title="Deutsch">
+			<Image src={deDe} layout="fill" alt="PT-BR" objectFit="contain" />
+		</a>
+	</div>
 )
-export const PortugueseFlage = () => (
-	<a href="/" title="Português">
-		<picture className="flex items-center justify-center text-blue-700 mt-4">
-			<source
-				srcSet="/assets/flags/brasil-portugues-pt-br.webp"
-				type="image/webp"
-			/>
-			<source srcSet="/assets/flags/brasil-portugues-pt-br.png" type="image/png" />
-			<img
-				alt="portugues"
-				loading="lazy"
-				src="/assets/flags/brasil-portugues-pt-br.png"
-			/>
-			<span className="ml-3">PT</span>
-		</picture>
-	</a>
-)
+export const PortugueseFlage = () => {
+	return (
+		<div className="relative h-6 w-6 flex items-center justify-center text-blue-700 mt-2">
+			<a href="/" title="Português">
+				<Image src={ptBr} layout="fill" alt="PT-BR" objectFit="contain" />
+			</a>
+		</div>
+	)
+}
 
 const Flage: React.FC = () => {
 	const { t } = useTranslation('navbar')
 	return (
 		<>
-			<Popover className="relative">
+			<Popover className="relative my-auto">
 				{({ open }) => (
 					<>
-						<Popover.Button
-							className={classNames(
-								open ? 'text-gray-900' : 'text-gray-500',
-								'mt-0.5 group w-14 rounded-md inline-flex items-center',
-							)}
-						>
-							<picture>
-								<source srcSet={t('flage')} type="image/png" />
-								<img
+						<Popover.Button className="flex">
+							<div className="relative h-5 w-5 my-auto">
+								<Image
 									src={t('flage')}
 									alt={t('flageAlt')}
-									loading="lazy"
-									width={24}
-									height={24}
+									layout="fill"
+									objectFit="cover"
+									className="rounded-md max-w-full h-auto align-middle border-none"
 								/>
-							</picture>
+							</div>
 							<ChevronDownIcon
 								className={classNames(
 									open ? 'text-blue-600' : 'text-blue-600',
-									'ml-1 h-5 w-5',
+									'h-6 w-6 my-auto',
 								)}
 								aria-hidden="true"
 							/>
@@ -87,8 +66,8 @@ const Flage: React.FC = () => {
 								static
 								className="absolute z-10 -ml-20 mt-3 transform px-2 w-auto max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
 							>
-								<div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden bg-white ml-12">
-									<div className="relative bg-white px-8 py-4 -mt-4">
+								<div className="ml-20 lg:ml-0 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden bg-white">
+									<div className="relative bg-white px-4">
 										<GermanFlage />
 										<PortugueseFlage />
 									</div>
