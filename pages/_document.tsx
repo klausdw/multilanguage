@@ -1,5 +1,7 @@
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'
-import Script from 'next/script'
+import dynamic from 'next/dynamic'
+
+const Gtag = dynamic(() => import('lib/GoogleTag'))
 export default class MyDoc extends Document {
 	static async getInitialProps(ctx: DocumentContext) {
 		const initialProps = await Document.getInitialProps(ctx)
@@ -17,7 +19,7 @@ export default class MyDoc extends Document {
 		return (
 			<Html lang={defaultLanguage} translate="no">
 				<Head>
-					<Gtm />
+					<Gtag />
 					<FavIcons />
 				</Head>
 				<body>
@@ -28,25 +30,6 @@ export default class MyDoc extends Document {
 		)
 	}
 }
-
-const Gtm = () => (
-	<>
-		<Script
-			async
-			src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS}`}
-		/>
-		<Script
-			dangerouslySetInnerHTML={{
-				__html: `
-							window.dataLayer = window.dataLayer || []
-  							function gtag(){dataLayer.push(arguments)}
-  							gtag('js', new Date());
-  							gtag('config', '${process.env.GOOGLE_ANALYTICS}');
-					  `,
-			}}
-		/>
-	</>
-)
 
 const FavIcons = () => (
 	<>
