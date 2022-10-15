@@ -28,7 +28,7 @@ const Header: React.FC<{
 				<meta name="author" content={author} />
 				<meta name="referrer" content="origin" key="referrer" />
 				<meta name="robots" content="index,follow" key="robots" />
-
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta property="og:type" content="website" />
 				<meta name="og:title" property="og:title" content={title} />
 				<meta
