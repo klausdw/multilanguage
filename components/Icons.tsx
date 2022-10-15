@@ -40,6 +40,7 @@ export const Whatsapp = () => (
 		target="_blank"
 		className="mx-2"
 		title="Whatsapp"
+		rel="nofollow"
 	>
 		<svg
 			className="w-7 h-7 fill-current"
@@ -51,7 +52,12 @@ export const Whatsapp = () => (
 	</a>
 )
 export const WhatsappChat = () => (
-	<a href={`https://wa.me/${phoneNumber}`} target="_blank" rel="noopener noreferrer">
+	<a
+		href={`https://wa.me/${phoneNumber}`}
+		target="_blank"
+		rel="noopener noreferrer"
+		aria-label="Whatp App me"
+	>
 		<svg
 			className="w-8 h-8 fill-current"
 			xmlns="http://www.w3.org/2000/svg"
