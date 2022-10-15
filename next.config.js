@@ -61,9 +61,15 @@ const nextConfigs = {
 		WEBSITE_URL: process.env.WEBSITE_URL,
 	},
 	webpack: (config, { isServer }) => {
+		config.module.rules.push({
+			test: /\.svg$/,
+			use: ['@svgr/webpack'],
+		})
+
 		if (isServer) {
 			require('./scripts/sitemap-generator')
 		}
+
 		return config
 	},
 }
