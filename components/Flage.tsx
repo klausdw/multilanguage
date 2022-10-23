@@ -11,15 +11,15 @@ function classNames(...classes: string[]) {
 }
 
 export const GermanFlage = () => (
-	<div className="relative h-6 w-6 flex items-center justify-center text-blue-700 mt-2">
+	<div className="relative h-6 w-6 flex items-center justify-center text-blue-700">
 		<a href="/de" title="Deutsch">
-			<Image src={deDe} layout="fill" alt="PT-BR" objectFit="contain" />
+			<Image src={deDe} layout="fill" alt="DE-DE" objectFit="contain" />
 		</a>
 	</div>
 )
 export const PortugueseFlage = () => {
 	return (
-		<div className="relative h-6 w-6 flex items-center justify-center text-blue-700 mt-2">
+		<div className="relative h-6 w-6 flex items-center justify-center text-blue-700">
 			<a href="/" title="Português">
 				<Image src={ptBr} layout="fill" alt="PT-BR" objectFit="contain" />
 			</a>
@@ -67,7 +67,7 @@ const Flage: React.FC = () => {
 								className="absolute z-10 -ml-20 mt-3 transform px-2 w-auto max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
 							>
 								<div className="ml-20 lg:ml-0 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden bg-white">
-									<div className="relative bg-white px-4">
+									<div className="relative bg-white px-4 py-2">
 										<GermanFlage />
 										<PortugueseFlage />
 									</div>
