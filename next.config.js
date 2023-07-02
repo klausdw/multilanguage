@@ -28,8 +28,16 @@ const nextConfigs = {
 				destination: '/candidate',
 			},
 			{
+				source: '/trabalahar-como-enfermeiro-na-alemanha',
+				destination: '/enfermeiro',
+			},
+			{
 				source: '/FAQ-perguntas-frequentes',
 				destination: '/faq',
+			},
+			{
+				source: '/blog/enfermeiros-na-alemanha',
+				destination: '/blog',
 			},
 			{
 				source: '/nossos-serviços',

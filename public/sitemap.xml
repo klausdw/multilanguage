@@ -2,127 +2,133 @@
   		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 			<url>
 				<loc>https://abconnection.de/404</loc>
-				<lastmod>2022-11-20T21:52:28.191Z</lastmod>
+				<lastmod>2023-07-02T07:31:11.237Z</lastmod>
 				<changefreq>daily</changefreq>
 				<priority>0.9</priority>
 			</url>
 <url>
 				<loc>https://abconnection.de/about</loc>
-				<lastmod>2022-11-20T21:52:28.191Z</lastmod>
+				<lastmod>2023-07-02T07:31:11.237Z</lastmod>
 				<changefreq>daily</changefreq>
 				<priority>0.9</priority>
 			</url>
 <url>
 				<loc>https://abconnection.de/candidate</loc>
-				<lastmod>2022-11-20T21:52:28.191Z</lastmod>
+				<lastmod>2023-07-02T07:31:11.237Z</lastmod>
 				<changefreq>daily</changefreq>
 				<priority>0.9</priority>
 			</url>
 <url>
 				<loc>https://abconnection.de/contact</loc>
-				<lastmod>2022-11-20T21:52:28.191Z</lastmod>
+				<lastmod>2023-07-02T07:31:11.237Z</lastmod>
 				<changefreq>daily</changefreq>
 				<priority>0.9</priority>
 			</url>
-			<url>
+<url>
+				<loc>https://abconnection.de/enfermeiro</loc>
+				<lastmod>2023-07-02T07:31:11.237Z</lastmod>
+				<changefreq>daily</changefreq>
+				<priority>0.9</priority>
+			</url>
+<url>
 				<loc>https://abconnection.de/faq</loc>
-				<lastmod>2022-11-20T21:52:28.191Z</lastmod>
+				<lastmod>2023-07-02T07:31:11.237Z</lastmod>
 				<changefreq>daily</changefreq>
 				<priority>0.9</priority>
 			</url>
 <url>
 				<loc>https://abconnection.de</loc>
-				<lastmod>2022-11-20T21:52:28.191Z</lastmod>
+				<lastmod>2023-07-02T07:31:11.237Z</lastmod>
 				<changefreq>daily</changefreq>
 				<priority>0.9</priority>
 			</url>
-			<url>
+<url>
 				<loc>https://abconnection.de/service</loc>
-				<lastmod>2022-11-20T21:52:28.191Z</lastmod>
+				<lastmod>2023-07-02T07:31:11.237Z</lastmod>
 				<changefreq>daily</changefreq>
 				<priority>0.9</priority>
 			</url>
-			<url>
+<url>
 				<loc>https://abconnection.de/sucess</loc>
-				<lastmod>2022-11-20T21:52:28.191Z</lastmod>
+				<lastmod>2023-07-02T07:31:11.237Z</lastmod>
 				<changefreq>daily</changefreq>
 				<priority>0.9</priority>
 			</url>
-			<url>
-				<loc>https://abconnection.de/trabalhar-na-alemanha-como-enfermeiro&enfermeiros-na-alemanha</loc>
-				<lastmod>2022-11-20T21:52:28.191Z</lastmod>
+<url>
+				<loc>https://abconnection.de/blog/[slug]</loc>
+				<lastmod>2023-07-02T07:31:11.237Z</lastmod>
 				<changefreq>daily</changefreq>
 				<priority>0.9</priority>
 			</url>
-			<url>
-				<loc>https://abconnection.de/FAQ-perguntas-frequentes</loc>
-				<lastmod>2022-11-20T21:52:28.191Z</lastmod>
-				<changefreq>daily</changefreq>
-				<priority>0.9</priority>
-			</url>
-			<url>
-				<loc>https://abconnection.de/nossos-serviços</loc>
-				<lastmod>2022-11-20T21:52:28.191Z</lastmod>
-				<changefreq>daily</changefreq>
-				<priority>0.9</priority>
-			</url>
-			<url>
-				<loc>https://abconnection.de/sobre-ab-connection</loc>
-				<lastmod>2022-11-20T21:52:28.191Z</lastmod>
-				<changefreq>daily</changefreq>
-				<priority>0.9</priority>
-			</url>
-			<url>
-				<loc>https://abconnection.de/entre-em-contato</loc>
-				<lastmod>2022-11-20T21:52:28.191Z</lastmod>
+<url>
+				<loc>https://abconnection.de/blog/index</loc>
+				<lastmod>2023-07-02T07:31:11.237Z</lastmod>
 				<changefreq>daily</changefreq>
 				<priority>0.9</priority>
 			</url>
 			 <url>
 				<loc>https://abconnection.de/de/404</loc>
-				<lastmod>2022-11-20T21:52:28.191Z</lastmod>
+				<lastmod>2023-07-02T07:31:11.237Z</lastmod>
 				<changefreq>daily</changefreq>
 				<priority>0.9</priority>
 			</url>
- 			<url>
+ <url>
 				<loc>https://abconnection.de/de/about</loc>
-				<lastmod>2022-11-20T21:52:28.191Z</lastmod>
+				<lastmod>2023-07-02T07:31:11.237Z</lastmod>
 				<changefreq>daily</changefreq>
 				<priority>0.9</priority>
 			</url>
  <url>
 				<loc>https://abconnection.de/de/candidate</loc>
-				<lastmod>2022-11-20T21:52:28.191Z</lastmod>
+				<lastmod>2023-07-02T07:31:11.237Z</lastmod>
 				<changefreq>daily</changefreq>
 				<priority>0.9</priority>
 			</url>
- 			<url>
+ <url>
 				<loc>https://abconnection.de/de/contact</loc>
-				<lastmod>2022-11-20T21:52:28.191Z</lastmod>
+				<lastmod>2023-07-02T07:31:11.237Z</lastmod>
 				<changefreq>daily</changefreq>
 				<priority>0.9</priority>
 			</url>
- 			<url>
+ <url>
+				<loc>https://abconnection.de/de/enfermeiro</loc>
+				<lastmod>2023-07-02T07:31:11.237Z</lastmod>
+				<changefreq>daily</changefreq>
+				<priority>0.9</priority>
+			</url>
+ <url>
 				<loc>https://abconnection.de/de/faq</loc>
-				<lastmod>2022-11-20T21:52:28.191Z</lastmod>
+				<lastmod>2023-07-02T07:31:11.237Z</lastmod>
 				<changefreq>daily</changefreq>
 				<priority>0.9</priority>
 			</url>
- 			<url>
+ <url>
 				<loc>https://abconnection.de/de</loc>
-				<lastmod>2022-11-20T21:52:28.191Z</lastmod>
+				<lastmod>2023-07-02T07:31:11.237Z</lastmod>
 				<changefreq>daily</changefreq>
 				<priority>0.9</priority>
 			</url>
- 			<url>
+ <url>
 				<loc>https://abconnection.de/de/service</loc>
-				<lastmod>2022-11-20T21:52:28.191Z</lastmod>
+				<lastmod>2023-07-02T07:31:11.237Z</lastmod>
 				<changefreq>daily</changefreq>
 				<priority>0.9</priority>
 			</url>
- 			<url>
+ <url>
 				<loc>https://abconnection.de/de/sucess</loc>
-				<lastmod>2022-11-20T21:52:28.191Z</lastmod>
+				<lastmod>2023-07-02T07:31:11.237Z</lastmod>
+				<changefreq>daily</changefreq>
+				<priority>0.9</priority>
+			</url>
+ <url>
+				<loc>https://abconnection.de/de/blog/[slug]</loc>
+				<lastmod>2023-07-02T07:31:11.237Z</lastmod>
+				<changefreq>daily</changefreq>
+				<priority>0.9</priority>
+			</url>
+ <url>
+				<loc>https://abconnection.de/de/blog/index</loc>
+				<lastmod>2023-07-02T07:31:11.237Z</lastmod>
 				<changefreq>daily</changefreq>
 				<priority>0.9</priority>
 			</url>

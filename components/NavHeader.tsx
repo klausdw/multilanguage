@@ -8,6 +8,8 @@ import {
 	NewspaperIcon,
 	UserGroupIcon,
 	XIcon,
+	BriefcaseIcon,
+	QuestionMarkCircleIcon,
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import { useTranslation } from 'next-i18next'
@@ -30,19 +32,26 @@ const NavHeader: React.FC = () => {
 			icon: IdentificationIcon,
 		},
 		{
+			name: t('nurse'),
+			description: t('nursenav'),
+			href: t('nursehref'),
+			as: t('nursepath'),
+			icon: BriefcaseIcon,
+		},
+		{
 			name: t('faq'),
 			description: t('faqnav'),
 			href: t('faqhref'),
 			as: t('faqpath'),
+			icon: QuestionMarkCircleIcon,
+		},
+		{
+			name: t('blog1'),
+			description: t('blognav'),
+			href: t('bloghref'),
+			as: t('blogpath'),
 			icon: NewspaperIcon,
 		},
-		// {
-		// 	name: t('blog1'),
-		// 	description: t('blognav'),
-		// 	href: t('candidatehref'),
-		// 	as: t('blogpath'),
-		// 	icon: NewspaperIcon,
-		// },
 	]
 	const service = [
 		{

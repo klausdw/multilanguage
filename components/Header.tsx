@@ -5,8 +5,8 @@ const Header: React.FC<{
 	keywords: string
 	description: string
 	path: string
-	hreflang: string
-	author: string
+	hreflang?: string
+	author?: string
 }> = ({ title, keywords, description, path, hreflang, author }) => {
 	// TODO: define Date in the i18n
 	// create date function with UTC zones.
@@ -36,7 +36,7 @@ const Header: React.FC<{
 					property="og:description"
 					content={description}
 				/>
-				<meta property="og:site_name" content="Proper Noun" />
+				<meta property="og:site_name" content={author} />
 				<meta property="og:url" content={pageUrl} />
 				<link rel="canonical" href={pageUrl} />
 				<link rel="alternate" href={hreflang} />
