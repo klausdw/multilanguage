@@ -10,7 +10,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 		port: 465,
 		secure: true,
 		auth: {
-			user: 'resend',
+			user: process.env.EMAIL_FROM,
 			pass: process.env.EMAIL_PASS,
 		},
 		tls: {
