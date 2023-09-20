@@ -10,7 +10,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 		port: 465,
 		secure: true,
 		auth: {
-			user: process.env.EMAIL_FROM,
+			user: 'resend',
 			pass: process.env.EMAIL_PASS,
 		},
 		tls: {
@@ -20,8 +20,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
 	const mailOption = {
 		from: `Contato do Website ${email}`,
-		to: process.env.EMAIL_TO,
-		bcc: process.env.EMAIL_COPY,
 		replyTo: email,
 		subject: `${name} - ${email}`,
 		text: message,
@@ -32,6 +30,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 		.then((result: any) => {
 			result
 			res.status(200).json({ status: 'OK' })
+
 		})
 		.catch((err: any) => {
 			console.log(err);
