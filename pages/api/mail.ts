@@ -6,7 +6,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 	const { name, email, message } = JSON.parse(req.body)
 
 	const transporter = nodemailer.createTransport({
-		host: 'smtp.ionos.de',
+		host: 'smtp.resend.com',
 		port: 465,
 		secure: true,
 		auth: {
