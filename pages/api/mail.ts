@@ -17,7 +17,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 				Authorization: `Bearer ${RESEND_API_KEY}`,
 			},
 			body: JSON.stringify({
-				from: `Contato do Website ${email}`,
+				from: `Contato do Website <${email}>`,
 				to: [process.env.EMAIL_TO],
 				subject: `${name} - ${email}`,
 				text: message,
