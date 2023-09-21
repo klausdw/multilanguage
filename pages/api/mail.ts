@@ -1,16 +1,17 @@
-import { NextApiResponse } from "next";
-import { NextApiRequest } from "next";
+import { NextApiResponse, NextApiRequest } from "next";
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-	const { name, email, message } = JSON.parse(req.body);
 
 	try {
+		const { name, email, message } = JSON.parse(req.body);
 		const data = await resend.emails.send({
-			from: `Contato do Website <${email}>`,
+			from: `Contato do Website <${process.env.EMAIL_FROM}>`,
 			to: [`${process.env.EMAIL_TO}`],
+			reply_to: email,
+			bcc: process.env.EMAIL_COPY,
 			subject: `${name} - ${email}`,
 			text: message,
 			html: message.replace(/\n/g, '<br/>'),
