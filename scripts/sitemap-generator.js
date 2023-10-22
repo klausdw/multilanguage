@@ -31,4 +31,4 @@ async function generateSitemap() {
 		</urlset>`
 	fs.writeFileSync('public/sitemap.xml', sitemap)
 }
-generateSitemap()
+// generateSitemap()
