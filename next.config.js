@@ -24,7 +24,7 @@ const nextConfigs = {
 	async rewrites() {
 		return [
 			{
-				source: '/trabalhar-na-alemanha-como-enfermeiro&enfermeiros-na-alemanha',
+				source: '/trabalhar-na-alemanha-como-enfermeiro-enfermeiros-na-alemanha',
 				destination: '/candidate',
 			},
 			{
