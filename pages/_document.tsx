@@ -52,7 +52,8 @@ const FavIcons = () => (
 		/>
 		<link rel="manifest" href="/favicons/site.webmanifest" />
 		<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5" />
-		<meta name="msapplication-TileColor" content="#2d89ef" />
 		<meta name="theme-color" content="#ffffff" />
+		<meta name="msapplication-TileColor" content="#2d89ef" />
+		<meta content="/favicons/browserconfig.xml" name="msapplication-config"></meta>
 	</>
 )
