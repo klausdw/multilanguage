@@ -78,7 +78,7 @@ const Enfermeiro: React.FC = () => {
 									burocráticos.
 									<br />
 									<a
-										href="/trabalhar-na-alemanha-como-enfermeiro&enfermeiros-na-alemanha"
+										href="/trabalhar-na-alemanha-como-enfermeiro-enfermeiros-na-alemanha"
 										className="text-blue-600"
 									>
 										➡️ Candidatura
