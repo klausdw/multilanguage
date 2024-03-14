@@ -57,6 +57,15 @@ const nextConfigs = {
 			},
 		]
 	},
+	async redirects() {
+		return [
+			{
+				source: '/de/blog/:slug',
+				destination: '/de/',
+				permanent: false,
+			},
+		]
+	},
 	images: {
 		domains: ['localhost'],
 		deviceSizes: [640, 768, 1024, 1280, 1536],
