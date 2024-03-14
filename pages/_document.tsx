@@ -50,6 +50,7 @@ const FavIcons = () => (
 			sizes="16x16"
 			href="/favicons/favicon-16x16.png"
 		/>
+		<link href="/favicons/favicon.ico" rel="icon" />
 		<link rel="manifest" href="/favicons/site.webmanifest" />
 		<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5" />
 		<meta name="theme-color" content="#ffffff" />
