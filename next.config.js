@@ -64,6 +64,11 @@ const nextConfigs = {
 				destination: '/de/',
 				permanent: false,
 			},
+			{
+				source: '/favicon.ico',
+				destination: '/favicons/favicon.ico',
+				permanent: true,
+			},
 		]
 	},
 	images: {
